@@ -206,7 +206,12 @@ static int Fibonacci(int n)
 
 [useful resource](https://learn.microsoft.com/en-us/training/modules/dotnet-files/1-introduction)
 
-### List all directories
+### Searching method
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+#### List all directories
 ```c#
 IEnumerable<string> listOfDirectories = Directory.EnumerateDirectories("stores");
 
@@ -214,7 +219,7 @@ foreach (var dir in listOfDirectories) {
     Console.WriteLine(dir);
 }
 ```
-### List files in a specific directory
+#### List files in a specific directory
 ```c#
 IEnumerable<string> files = Directory.EnumerateFiles("stores");
 
@@ -224,7 +229,7 @@ foreach (var file in files)
 }
 ```
 
-### List all content in a directory and all subdirectories
+#### List all content in a directory and all subdirectories
 ```c#
 // Find all *.txt files in the stores folder and its subfolders
 IEnumerable<string> allFilesInAllFolders = Directory.EnumerateFiles("stores", "*.txt", SearchOption.AllDirectories);
@@ -235,17 +240,17 @@ foreach (var file in allFilesInAllFolders)
 }
 ```
 
-### Determine the current directory
+#### Determine the current directory
 ```c#
 Console.WriteLine(Directory.GetCurrentDirectory());
 ```
 
-### Work with special directories
+#### Work with special directories
 ```c#
 string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 ```
 
-### Special path characters
+#### Special path characters
 To help you use the correct  Directory Separator in different operating systems(ex. macOs, Windows)
 ```c#
 Console.WriteLine($"stores{Path.DirectorySeparatorChar}201");
@@ -255,17 +260,17 @@ Console.WriteLine($"stores{Path.DirectorySeparatorChar}201");
 // stores/201 on macOS
 ```
 
-### Join paths
+#### Join paths
 ```c#
 Console.WriteLine(Path.Combine("stores","201")); // outputs: stores/201
 ```
 
-### Determine filename extensions
+#### Determine filename extensions
 ```c#
 Console.WriteLine(Path.GetExtension("sales.json")); // outputs: .json
 ```
 
-### Get everything you need to know about a file or path
+#### Get everything you need to know about a file or path
 ```c#
 string fileName = $"stores{Path.DirectorySeparatorChar}201{Path.DirectorySeparatorChar}sales{Path.DirectorySeparatorChar}sales.json";
 
@@ -273,6 +278,11 @@ FileInfo info = new FileInfo(fileName);
 
 Console.WriteLine($"Full Name: {info.FullName}{Environment.NewLine}Directory: {info.Directory}{Environment.NewLine}Extension: {info.Extension}{Environment.NewLine}Create Date: {info.CreationTime}"); // And many more
 ```
+
+<!-- /MarkdownTOC -->
+</details>
+
+
 
 <!-- /MarkdownTOC -->
 </details>
