@@ -384,3 +384,12 @@ File.AppendAllText($"salesTotalDir{Path.DirectorySeparatorChar}totals.txt", $"{d
 <!-- /MarkdownTOC -->
 </details>
 
+## Web API with ASP.NET Core controllers
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+
+
+<!-- /MarkdownTOC -->
+</details>
