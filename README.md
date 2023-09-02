@@ -200,6 +200,7 @@ static int Fibonacci(int n)
 </details>
 
 ## File system in .NET
+[useful resource](https://learn.microsoft.com/en-us/training/modules/dotnet-files/1-introduction)
 <details close>
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
