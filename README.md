@@ -103,4 +103,15 @@ dotnet add package <dependency name>
 <!-- /MarkdownTOC -->
 </details>
 
+## How to debug .NET code in VS Code
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+- [Useful tutorial](https://learn.microsoft.com/en-us/training/modules/dotnet-debug/3-analyze-your-program-state)
+- Remeber to change console setting in launch.json from "internalConsole" to "integratedTerminal" when you want debug console to handle terminal input.
+
+<!-- /MarkdownTOC -->
+</details>
+
 
