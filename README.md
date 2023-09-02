@@ -282,6 +282,29 @@ Console.WriteLine($"Full Name: {info.FullName}{Environment.NewLine}Directory: {i
 <!-- /MarkdownTOC -->
 </details>
 
+### create method
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+#### Create directories
+```c#
+Directory.CreateDirectory(Path.Combine(Directory.GetCurrentDirectory(), "stores","201","newDir"));
+```
+
+#### Make sure directories exist
+```c#
+bool doesDirectoryExist = Directory.Exists(filePath);
+```
+
+#### Create files
+```c#
+File.WriteAllText(Path.Combine(Directory.GetCurrentDirectory(), "greeting.txt"), "Hello World!");
+```
+
+<!-- /MarkdownTOC -->
+</details>
+
 
 
 <!-- /MarkdownTOC -->
