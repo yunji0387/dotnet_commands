@@ -1,7 +1,18 @@
 # .NET Commands
 
 ## [Learning Source](https://learn.microsoft.com/en-us/training/dotnet/)
+## [C# commands](https://github.com/yunji0387/CSharp_commands)
 
+## Table of Contents
+1. [Set up development environment](#setup)
+2. [How to create, build & run .NET project](#create_dotnet)
+3. [How to create, build & run c#](#create_csharp)
+4. [How to install/uninstall/restore/check a package/dependency](#dotnet_dependency)
+5. [How to debug .NET code in VS Code](#dotnet_debug)
+6. [File system in .NET](#dotnet_filesystem)
+7. [Web API with ASP.NET Core controllers](#web_api_asp_dotnet)
+
+<a id="setup"></a>
 ## Set up development environment
 <details close>
 <summary><b>(click to expand/hide)</b></summary>
@@ -15,6 +26,7 @@
 <!-- /MarkdownTOC -->
 </details>
 
+<a id="create_dotnet"></a>
 ## How to create, build & run .NET project
 <details close>
 <summary><b>(click to expand/hide)</b></summary>
@@ -39,6 +51,7 @@
 <!-- /MarkdownTOC -->
 </details>
 
+<a id="create_csharp"></a>
 ## How to create, build & run c#
 <details close>
 <summary><b>(click to expand/hide)</b></summary>
@@ -67,6 +80,7 @@
 <!-- /MarkdownTOC -->
 </details>
 
+<a id="dotnet_dependency"></a>
 ## How to install/uninstall/restore/check a package/dependency
 <details close>
 <summary><b>(click to expand/hide)</b></summary>
@@ -103,6 +117,7 @@ dotnet add package <dependency name>
 <!-- /MarkdownTOC -->
 </details>
 
+<a id="dotnet_debug"></a>
 ## How to debug .NET code in VS Code
 <details close>
 <summary><b>(click to expand/hide)</b></summary>
@@ -199,6 +214,7 @@ static int Fibonacci(int n)
 <!-- /MarkdownTOC -->
 </details>
 
+<a id="dotnet_filesystem"></a>
 ## File system in .NET
 <details close>
 <summary><b>(click to expand/hide)</b></summary>
@@ -384,6 +400,7 @@ File.AppendAllText($"salesTotalDir{Path.DirectorySeparatorChar}totals.txt", $"{d
 <!-- /MarkdownTOC -->
 </details>
 
+<a id="web_api_asp_dotnet"></a>
 ## Web API with ASP.NET Core controllers
 <details close>
 <summary><b>(click to expand/hide)</b></summary>
