@@ -235,6 +235,45 @@ foreach (var file in allFilesInAllFolders)
 }
 ```
 
+### Determine the current directory
+```c#
+Console.WriteLine(Directory.GetCurrentDirectory());
+```
+
+### Work with special directories
+```c#
+string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+```
+
+### Special path characters
+To help you use the correct  Directory Separator in different operating systems(ex. macOs, Windows)
+```c#
+Console.WriteLine($"stores{Path.DirectorySeparatorChar}201");
+// returns:
+// stores\201 on Windows
+//
+// stores/201 on macOS
+```
+
+### Join paths
+```c#
+Console.WriteLine(Path.Combine("stores","201")); // outputs: stores/201
+```
+
+### Determine filename extensions
+```c#
+Console.WriteLine(Path.GetExtension("sales.json")); // outputs: .json
+```
+
+### Get everything you need to know about a file or path
+```c#
+string fileName = $"stores{Path.DirectorySeparatorChar}201{Path.DirectorySeparatorChar}sales{Path.DirectorySeparatorChar}sales.json";
+
+FileInfo info = new FileInfo(fileName);
+
+Console.WriteLine($"Full Name: {info.FullName}{Environment.NewLine}Directory: {info.Directory}{Environment.NewLine}Extension: {info.Extension}{Environment.NewLine}Create Date: {info.CreationTime}"); // And many more
+```
+
 <!-- /MarkdownTOC -->
 </details>
 
