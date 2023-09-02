@@ -92,6 +92,13 @@ dotnet add package <dependency name>
   ```bash
   dotnet remove package <name of dependency>
   ```
+- Find and update outdated packages
+  ```bash
+  dotnet list package --outdated
+  ```
+  ```bash
+  dotnet add package <package name>
+  ```
 
 <!-- /MarkdownTOC -->
 </details>
