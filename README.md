@@ -206,7 +206,7 @@ static int Fibonacci(int n)
 
 [useful resource](https://learn.microsoft.com/en-us/training/modules/dotnet-files/1-introduction)
 
-### Searching method
+### Searching methods
 <details close>
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
@@ -219,6 +219,8 @@ foreach (var dir in listOfDirectories) {
     Console.WriteLine(dir);
 }
 ```
+---
+
 #### List files in a specific directory
 ```c#
 IEnumerable<string> files = Directory.EnumerateFiles("stores");
@@ -228,6 +230,7 @@ foreach (var file in files)
     Console.WriteLine(file);
 }
 ```
+---
 
 #### List all content in a directory and all subdirectories
 ```c#
@@ -239,16 +242,19 @@ foreach (var file in allFilesInAllFolders)
     Console.WriteLine(file);
 }
 ```
+---
 
 #### Determine the current directory
 ```c#
 Console.WriteLine(Directory.GetCurrentDirectory());
 ```
+---
 
 #### Work with special directories
 ```c#
 string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 ```
+---
 
 #### Special path characters
 To help you use the correct  Directory Separator in different operating systems(ex. macOs, Windows)
@@ -259,16 +265,19 @@ Console.WriteLine($"stores{Path.DirectorySeparatorChar}201");
 //
 // stores/201 on macOS
 ```
+---
 
 #### Join paths
 ```c#
 Console.WriteLine(Path.Combine("stores","201")); // outputs: stores/201
 ```
+---
 
 #### Determine filename extensions
 ```c#
 Console.WriteLine(Path.GetExtension("sales.json")); // outputs: .json
 ```
+---
 
 #### Get everything you need to know about a file or path
 ```c#
@@ -278,11 +287,12 @@ FileInfo info = new FileInfo(fileName);
 
 Console.WriteLine($"Full Name: {info.FullName}{Environment.NewLine}Directory: {info.Directory}{Environment.NewLine}Extension: {info.Extension}{Environment.NewLine}Create Date: {info.CreationTime}"); // And many more
 ```
+---
 
 <!-- /MarkdownTOC -->
 </details>
 
-### create method
+### create methods
 <details close>
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
@@ -291,21 +301,85 @@ Console.WriteLine($"Full Name: {info.FullName}{Environment.NewLine}Directory: {i
 ```c#
 Directory.CreateDirectory(Path.Combine(Directory.GetCurrentDirectory(), "stores","201","newDir"));
 ```
+---
 
 #### Make sure directories exist
 ```c#
 bool doesDirectoryExist = Directory.Exists(filePath);
 ```
+---
 
 #### Create files
 ```c#
 File.WriteAllText(Path.Combine(Directory.GetCurrentDirectory(), "greeting.txt"), "Hello World!");
 ```
+---
 
 <!-- /MarkdownTOC -->
 </details>
 
+### Read and write to files methods
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
 
+#### Read data from files
+```c#
+File.ReadAllText($"stores{Path.DirectorySeparatorChar}201{Path.DirectorySeparatorChar}sales.json");
+```
+The return object from ReadAllText is a string.
+```json
+{
+  "total": 22385.32
+}
+```
+---
+#### Parse data in files
+In bash, add "json.NET" package
+```bash
+dotnet add package Newtonsoft.Json
+```
+Then, add using Newtonsoft.Json to the top of your class file:
+```c#
+using Newtonsoft.Json; 
+```
+And use the JsonConvert.DeserializeObject method:
+```c#
+var salesJson = File.ReadAllText($"stores{Path.DirectorySeparatorChar}201{Path.DirectorySeparatorChar}sales.json");
+var salesData = JsonConvert.DeserializeObject<SalesTotal>(salesJson);
+
+Console.WriteLine(salesData.Total);
+
+class SalesTotal
+{
+  public double Total { get; set; }
+}
+```
+---
+#### Write data to files
+```c#
+var data = JsonConvert.DeserializeObject<SalesTotal>(salesJson);
+
+File.WriteAllText($"salesTotalDir{Path.DirectorySeparatorChar}totals.txt", data.Total.ToString());
+
+// totals.txt
+// 22385.32
+```
+---
+#### Append data to files
+```c#
+var data = JsonConvert.DeserializeObject<SalesTotal>(salesJson);
+
+File.AppendAllText($"salesTotalDir{Path.DirectorySeparatorChar}totals.txt", $"{data.Total}{Environment.NewLine}");
+
+// totals.txt
+// 22385.32
+// 22385.32
+```
+---
+
+<!-- /MarkdownTOC -->
+</details>
 
 <!-- /MarkdownTOC -->
 </details>
