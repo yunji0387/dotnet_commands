@@ -111,6 +111,91 @@ dotnet add package <dependency name>
 - [Useful tutorial](https://learn.microsoft.com/en-us/training/modules/dotnet-debug/3-analyze-your-program-state)
 - Remeber to change console setting in launch.json from "internalConsole" to "integratedTerminal" when you want debug console to handle terminal input.
 
+### Debug - write information to output windows
+[Useful source 1](https://learn.microsoft.com/en-us/training/modules/dotnet-debug/5-logging-and-tracing),
+[Useful source 2](https://learn.microsoft.com/en-us/training/modules/dotnet-debug/6-use-logging-and-tracing)
+1. import Debug methods library
+   ```c#
+   using System.Diagnostis;
+   ```
+2. example:
+   ```c#
+   using System.Diagnostics;
+   
+   int result = Fibonacci(5);
+   Console.WriteLine(result);
+   
+   static int Fibonacci(int n)
+   {
+       Debug.WriteLine($"Entering {nameof(Fibonacci)} method");
+       Debug.WriteLine($"We are looking for the {n}th number");
+       int n1 = 0;
+       int n2 = 1;
+       int sum;
+   
+       for(int i=2; i<=n ; i++)
+       {
+           sum = n1 + n2;
+           n1 = n2;
+           n2 = sum;
+           Debug.WriteLineIf(sum == 1, $"sum is 1, n1 is {n1}, n2 is {n2}");
+       }
+       return n == 0 ? n1 : n2;
+   }
+
+   ```
+### Debug - check for conditions with Assert
+[Useful source](https://learn.microsoft.com/en-us/training/modules/dotnet-debug/6-use-logging-and-tracing)
+
+Example: 
+```cs
+using System.Diagnostics;
+
+// See https://aka.ms/new-console-template for more information
+
+int result = Fibonacci(6);
+
+static int Fibonacci(int n)
+{
+    int n1 = 0;
+    int n2 = 1;
+    int sum;
+
+    for (int i = 2; i <= n; i++)
+    {
+        sum = n1 + n2;
+        n1 = n2;
+        n2 = sum;
+    }
+    // If n2 is 5 continue, else break.
+    Debug.Assert(n2 == 5, "The return value is not 5 and it should be.");
+    return n == 0 ? n1 : n2;
+}
+```
+1. Run with debugging mode
+   You should see below message in your debug console:
+   ```output
+   ---- DEBUG ASSERTION FAILED ----
+   ---- Assert Short Message ----
+   The return value is not 5 and it should be.
+   ---- Assert Long Message ----
+   
+      at Program.<<Main>$>g__Fibonacci|0_0(Int32 n) in C:\Users\Jon\Desktop\DotNetDebugging\Program.cs:line 23
+      at Program.<Main>$(String[] args) in C:\Users\Jon\Desktop\DotNetDebugging\Program.cs:line 3
+   ```
+2. Run with terminal "dotnet run"
+   You should see below message in your terminal:
+   ```output
+   Process terminated. Assertion failed.
+   The return value is not 5 and it should be.
+      at Program.<<Main>$>g__Fibonacci|0_0(Int32 n) in C:\Users\Jon\Desktop\DotNetDebugging\Program.cs:line 23
+      at Program.<Main>$(String[] args) in C:\Users\Jon\Desktop\DotNetDebugging\Program.cs:line 3
+   ```
+   - To run without Assertion with terminal, use:
+     ```bash
+     dotnet run --configuration Release
+     ```
+
 <!-- /MarkdownTOC -->
 </details>
 
