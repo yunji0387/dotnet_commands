@@ -26,6 +26,7 @@
 7. [File system in .NET](#dotnet_filesystem)
 8. [Web API with ASP.NET Core controllers](#web_api_asp_dotnet)
 9. [Minimal API with ASP.NET Core, and .NET](#minimal_api_dotnet)
+10. [Use .NET HTTP REPL command-line tool to make HTTP requests](#httprepl)
 
 <a id="setup"></a>
 ## Set up development environment
@@ -452,6 +453,33 @@ File.AppendAllText($"salesTotalDir{Path.DirectorySeparatorChar}totals.txt", $"{d
 <!-- MarkdownTOC -->
 
 
+
+<!-- /MarkdownTOC -->
+</details>
+
+<a id="httprepl"></a>
+## Use .NET HTTP REPL command-line tool to make HTTP requests
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+### How to install
+- In terminal, run:
+  ```bash
+  dotnet tool install -g Microsoft.dotnet-httprepl
+  ```
+- If the HttpRepl tool warns Unable to find an OpenAPI description, the most likely cause is an untrusted development certificate.
+  ```bash
+  dotnet dev-certs https --trust
+  ```
+
+### How to run
+- Make sure that your project is still running on localhost
+- In new terminal, run:
+  ```bash
+  httprepl https://localhost:{PORT}
+  ```
+### [How to use example](https://learn.microsoft.com/en-us/training/modules/build-web-api-aspnet-core/3-exercise-create-web-api)
 
 <!-- /MarkdownTOC -->
 </details>
