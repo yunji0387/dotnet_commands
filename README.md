@@ -19,12 +19,13 @@
 ## Table of Contents
 1. [Set up development environment](#setup)
 2. [How to create, build & run .NET project](#create_dotnet)
-3. [How to create, build & run c#](#create_csharp)
-4. [How to install/uninstall/restore/check a package/dependency](#dotnet_dependency)
-5. [How to debug .NET code in VS Code](#dotnet_debug)
-6. [File system in .NET](#dotnet_filesystem)
-7. [Web API with ASP.NET Core controllers](#web_api_asp_dotnet)
-8. [Minimal API with ASP.NET Core, and .NET](#minimal_api_dotnet)
+3. [How to change .NET project's .NET framework version](#dotnet_version)
+4. [How to create, build & run c#](#create_csharp)
+5. [How to install/uninstall/restore/check a package/dependency](#dotnet_dependency)
+6. [How to debug .NET code in VS Code](#dotnet_debug)
+7. [File system in .NET](#dotnet_filesystem)
+8. [Web API with ASP.NET Core controllers](#web_api_asp_dotnet)
+9. [Minimal API with ASP.NET Core, and .NET](#minimal_api_dotnet)
 
 <a id="setup"></a>
 ## Set up development environment
@@ -61,6 +62,25 @@
    ```bash
    dotnet run
    ```
+
+<!-- /MarkdownTOC -->
+</details>
+
+<a id="dotnet_version"></a>
+## How to change .NET project's .NET framework version
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+- In your project, located to <Project Name>.csproj file
+- Find the <TargetFramework> in <PropertyGroup>
+- change it to desired .net version
+  ```csproj
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    ...
+  </PropertyGroup>
+  ```
 
 <!-- /MarkdownTOC -->
 </details>
