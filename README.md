@@ -479,7 +479,7 @@ File.AppendAllText($"salesTotalDir{Path.DirectorySeparatorChar}totals.txt", $"{d
   ```bash
   httprepl https://localhost:{PORT}
   ```
-### [How to use example](https://learn.microsoft.com/en-us/training/modules/build-web-api-aspnet-core/3-exercise-create-web-api)
+### [How to use examples - more examples on later units](https://learn.microsoft.com/en-us/training/modules/build-web-api-aspnet-core/3-exercise-create-web-api)
 
 <!-- /MarkdownTOC -->
 </details>
