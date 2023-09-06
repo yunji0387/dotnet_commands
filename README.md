@@ -1,11 +1,20 @@
 # .NET Commands
 
-## Learning Source
-- [.NET Learn](https://learn.microsoft.com/en-us/training/dotnet/)
+### Prerequisite
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
 - [C# commands](https://github.com/yunji0387/CSharp_commands)
 - [(video tutorials) .NET 101](https://learn.microsoft.com/en-us/shows/NET-Core-101/?WT.mc_id=Educationaldotnet-c9-scottha)
 - [(video tutorials) ASP.NET Core 101](https://learn.microsoft.com/en-us/shows/ASPNET-Core-101/?WT.mc_id=Educationaspnet-c9-niner)
 - [(video tutorials) ASP.NET Core Web API 101](https://learn.microsoft.com/en-us/shows/Beginners-Series-to-Web-APIs/)
+
+<!-- /MarkdownTOC -->
+</details>
+
+## Learning Source
+- [.NET Learn](https://learn.microsoft.com/en-us/training/dotnet/)
 
 ## Table of Contents
 1. [Set up development environment](#setup)
