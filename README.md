@@ -24,6 +24,7 @@
 5. [How to debug .NET code in VS Code](#dotnet_debug)
 6. [File system in .NET](#dotnet_filesystem)
 7. [Web API with ASP.NET Core controllers](#web_api_asp_dotnet)
+8. [Minimal API with ASP.NET Core, and .NET](#minimal_api_dotnet)
 
 <a id="setup"></a>
 ## Set up development environment
@@ -424,6 +425,16 @@ File.AppendAllText($"salesTotalDir{Path.DirectorySeparatorChar}totals.txt", $"{d
 <!-- /MarkdownTOC -->
 </details>
 
+<a id="minimal_api_dotnet"></a>
+## Minimal API with ASP.NET Core, and .NET
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+
+
+<!-- /MarkdownTOC -->
+</details>
 
 <a id="title"></a>
 ## title
