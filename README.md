@@ -16,6 +16,8 @@
 ## Learning Source
 - [.NET Learn](https://learn.microsoft.com/en-us/training/dotnet/)
 
+## [Blazor commands](./blazor_commands.md)
+
 ## Table of Contents
 1. [Set up development environment](#setup)
 2. [How to create, build & run .NET project](#create_dotnet)
