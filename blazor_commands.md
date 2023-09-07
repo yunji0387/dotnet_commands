@@ -5,6 +5,7 @@
 
 ## Table of Contents
 1. [How to create & run Blazor app](#how_to_create)
+2. [Create razor component](#create_component)
 
 <a id="how_to_create"></a>
 ## How to create & run Blazor app with Visual Studio
@@ -26,6 +27,21 @@
    ```bash
    dotnet watch run
    ```
+
+<!-- /MarkdownTOC -->
+</details>
+
+<a id="create_component"></a>
+## Create razor component
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+### Using command line
+- In terminal, run:
+  ```bash
+  dotnet new razorcomponent -n Todo -o Pages
+  ```
 
 <!-- /MarkdownTOC -->
 </details>
