@@ -14,8 +14,15 @@
 </details>
 
 ### Learning Source
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
 - [.NET Learn](https://learn.microsoft.com/en-us/training/dotnet/)
 - [Blazor commands](./blazor_commands.md)
+
+<!-- /MarkdownTOC -->
+</details>
 
 ## Table of Contents
 1. [Set up development environment](#setup)
